@@ -22,15 +22,14 @@ export function TableContent({ method }) {
     <Flex
       p="12px"
       flexDirection="column"
-      alignItems="flex-end"
       borderRadius="8px"
       bg="#fff"
+      w="100%"
       boxShadow="0px 2px 6px 0px rgba(26, 24, 30, 0.04)"
     >
       <Flex flexDirection="column" alignItems="flex-start" gap="12px">
         <Flex
           justifyContent="space-between"
-          gap="670px"
           alignItems="center"
           alignSelf="stretch"
         >
@@ -168,7 +167,9 @@ export function TableContent({ method }) {
               >
                 {TableArr.map((ele, ind) => (
                   <Tr>
-                    <Td>#281209</Td>
+                    <Td color="#146eb4" fontWeight="500">
+                      #281209
+                    </Td>
                     <Td>
                       {ind % 2 === 0 && (
                         <Flex alignItems="center" gap="5px">
@@ -200,9 +201,9 @@ export function TableContent({ method }) {
                       )}
                     </Td>
                     <Td>5455456541512</Td>
-                    <Td>₹10,125.00</Td>
+                    {method === "payout" && <Td>₹10,125.00</Td>}
                     {method === "refund" && <Td>Today, 08:45 PM</Td>}
-                    {method === "payout" && <Td>₹1,125.00</Td>}
+                    <Td>₹1,125.00</Td>
                     {method === "payout" && <Td>₹9,312</Td>}
                   </Tr>
                 ))}

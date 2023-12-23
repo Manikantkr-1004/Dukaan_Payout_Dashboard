@@ -356,6 +356,7 @@ export function Payout() {
           alignItems="flex-start"
           gap="20px"
           mt="10px"
+          w="100%"
         >
           <Flex flexDirection="column" alignItems="flex-start" gap="20px">
             <Text
